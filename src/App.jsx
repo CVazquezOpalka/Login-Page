@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
+import {Container, ImgBox, FormContainer, Button, Box, MediaBox, MiniBox, Parrafo} from './style/Ui'
 import IMG from "./assets/Fondo.webp";
 import { Dark, Light } from "./style/Theme";
 import { GlobalStyle } from "./style/GlobalStyle";
-import { Form } from "./components/Form";
+import { Form } from "./components/Form/Form";
+import { FcIdea, FcNoIdea } from "react-icons/fc";
+import Logo from "./assets/logo.png";
+import Facebook from "./assets/facebook.png";
+import Twitter from "./assets/gorjeo.png";
+import Instagram from "./assets/instagram.png";
+import Linkedin from "./assets/linkedin.png";
+import Github from "./assets/github.png";
 
 function App() {
   const [toggle, setToggle] = useState(false);
@@ -20,7 +28,32 @@ function App() {
           <img src={IMG} alt="imagen de muestra" />
         </ImgBox>
         <FormContainer>
+          <Button onClick={changeTheme}>
+            {toggle ? <FcIdea /> : <FcNoIdea />}
+          </Button>
+          <Box>
+            <img src={Logo} alt="Logo de educacion"></img>
+            <Parrafo>Ingresa con tu usuario y contraseña.</Parrafo>
+            <Parrafo>Sumergete en este exclusivo Bootcamp.</Parrafo>
+          </Box>
           <Form />
+          <MediaBox>
+            <MiniBox>
+              <img src={Facebook} alt="logo" />
+            </MiniBox>
+            <MiniBox>
+              <img src={Twitter} alt="logo" />
+            </MiniBox>
+            <MiniBox>
+              <img src={Instagram} alt="logo" />
+            </MiniBox>
+            <MiniBox>
+              <img src={Linkedin} alt="logo" />
+            </MiniBox>
+            <MiniBox>
+              <img src={Github} alt="logo" />
+            </MiniBox>
+          </MediaBox>
         </FormContainer>
       </ThemeProvider>
     </Container>
@@ -28,31 +61,3 @@ function App() {
 }
 
 export default App;
-
-const Container = styled.main`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-`;
-
-const ImgBox = styled.div`
-  height: 100%;
-  display: flex;
-  width: 60%;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    vertical-align: center;
-  }
-`;
-
-const FormContainer = styled.div`
-  height: 100%;
-  width: 40%;
-  background-color: ${(props) => props.theme.body};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 300ms ease;
-`;

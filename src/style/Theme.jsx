@@ -13,8 +13,11 @@ export const Light = {
     fontxxxl: "4em",
     fontButton: "0.875em",
     navHeight: "5rem",
-    margin: "1.2rem"
+    margin: "1.2rem",
+    backgroundButton: "orange",
+    hoverEffect: "tomato"
   };
+
   export const Dark = {
     body: "#202020",
     text: "#fff",
@@ -30,5 +33,7 @@ export const Light = {
     fontxxxl: "4em",
     fontButton: "0.875em",
     navHeight: "5rem",
-    margin: "1.2rem"
-  };
+    margin: "1.2rem",
+    backgroundButton: "#eebc3e",
+    hoverEffect: "#d19a0e"
+  }
