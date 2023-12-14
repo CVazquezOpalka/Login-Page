@@ -7,11 +7,11 @@ export const Form = () => {
   return (
     <FormContent>
       <InputField>
-        <Input type="text"></Input>
+        <Input type="text" required></Input>
         <Label>Nombre de usuario</Label>
       </InputField>
       <InputField>
-        <Input type="password"></Input>
+        <Input type="password" required></Input>
         <Label>Contraseña</Label>
       </InputField>
       <InputButton>

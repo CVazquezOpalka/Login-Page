@@ -28,7 +28,7 @@ border: 2px solid ${(props) => props.theme.text};
 background-color: transparent;
 color: ${(props) => props.theme.text};
 outline: none;
-&:focus ~ label {
+&:is(:focus, :valid) ~ label {
   top: 0;
   left: 15px;
   font-size: 1rem;

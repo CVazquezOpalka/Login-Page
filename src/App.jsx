@@ -14,7 +14,7 @@ import Linkedin from "./assets/linkedin.png";
 import Github from "./assets/github.png";
 
 function App() {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
   const changeTheme = () => {
     setToggle(!toggle);
   };
